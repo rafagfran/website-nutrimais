@@ -1,0 +1,32 @@
+---
+import { type VariantProps, tv } from "tailwind-variants";
+
+const button = tv({
+  base: "text-white rounded-md",
+  variants: {
+    variant: {
+      default: "bg-primary-orange",
+      green: "bg-primary-green",
+    },
+    size: {
+      default: "text-sm px-4 py-1.5",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+    size: "default",
+  },
+});
+
+type ButtonVariants = VariantProps<typeof button>;
+
+interface Props extends ButtonVariants {
+  class?: string;
+}
+
+const { size, variant, class: className } = Astro.props;
+---
+
+<button class={button({ size, variant, class: className })}>
+  <slot />
+</button>

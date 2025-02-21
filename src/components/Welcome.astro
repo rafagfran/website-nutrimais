@@ -1,0 +1,13 @@
+---
+import Header from "./Header.astro";
+import Hero from "./Hero.astro";
+import { Products } from "./Products";
+---
+
+<div class="flex flex-col gap-between-sections">
+  <div class="h-[90vh] relative ">
+    <Header />
+    <Hero />
+  </div>
+  <Products client:load />
+</div>

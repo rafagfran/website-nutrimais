@@ -1,0 +1,24 @@
+---
+import Button from "./shared/Button.astro";
+import ListIcon from "phosphor-astro/List.astro"
+---
+
+<header class="absolute top-0 left-0 w-full z-50 flex-center-row  justify-between p-4">
+  <img src="/src/assets/nutrimais.webp" alt="" class="max-w-[90px] h-auto" />
+
+  <div>
+    <ListIcon class='size-8 grow-0' />
+  </div>
+
+  <nav class="hidden">
+    <ul class="flex-center-row gap-6">
+      <li>Sobre</li>
+      <li>Produtos</li>
+      <li>Seja um distribuidor</li>
+    </ul>
+  </nav>
+
+  <div class="hidden">
+    <Button>Acessar a Loja</Button>
+  </div>
+</header>
